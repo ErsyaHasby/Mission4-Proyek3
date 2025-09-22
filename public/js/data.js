@@ -90,5 +90,6 @@ const coursesData = [
     }
 ];
 
-// Ekspor data agar bisa digunakan di file lain
-export { mahasiswaData, coursesData };
+// Buat variabel global agar bisa diakses
+window.mahasiswaData = mahasiswaData;
+window.coursesData = coursesData;
