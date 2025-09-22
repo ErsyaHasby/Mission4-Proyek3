@@ -207,4 +207,11 @@ class Admin extends BaseController
             'courses' => $courses
         ]);
     }
+    public function listStudents()
+    {
+        $mahasiswaModel = new MahasiswaModel();
+        $students = $mahasiswaModel->findAll();
+
+        return $this->response->setJSON($students);
+    }
 }

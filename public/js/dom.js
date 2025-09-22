@@ -1,0 +1,38 @@
+// Pilih elemen dengan querySelector
+const mahasiswaList = document.querySelector('#mahasiswa-list');
+const viewStudentLink = document.querySelector('#view-student-list');
+
+// Fungsi untuk menampilkan daftar mahasiswa dari backend
+async function displayMahasiswaList() {
+    if (mahasiswaList) {
+        mahasiswaList.innerHTML = ''; // Bersihkan daftar sebelum diisi ulang
+        mahasiswaList.style.display = 'block'; // Tampilkan div
+
+        try {
+            const response = await fetch('/admin/list_students');
+            const data = await response.json();
+
+            data.forEach(mahasiswa => {
+                const div = document.createElement('div');
+                div.className = 'alert alert-info mb-2';
+                div.textContent = `NIM: ${mahasiswa.NIM} - Nama: ${mahasiswa.nama} (Umur: ${mahasiswa.umur})`;
+                mahasiswaList.appendChild(div);
+            });
+        } catch (error) {
+            mahasiswaList.innerHTML = '<p>Error memuat data: ' + error.message + '</p>';
+        }
+    }
+}
+
+// Tambah event listener untuk link
+if (viewStudentLink) {
+    viewStudentLink.addEventListener('click', function (event) {
+        event.preventDefault(); // Hindari reload halaman
+        displayMahasiswaList();
+    });
+}
+
+// Sembunyikan daftar saat halaman dimuat ulang
+if (mahasiswaList) {
+    mahasiswaList.style.display = 'none';
+}

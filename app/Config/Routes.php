@@ -25,13 +25,6 @@ $routes->group('student', ['filter' => 'auth:student'], function ($routes) {
 // Admin
 $routes->group('admin', ['filter' => 'auth:admin'], function ($routes) {
     $routes->get('dashboard', 'Admin::dashboard');
-    $routes->get('courses', 'Admin::courses');
-    $routes->get('courses/create', 'Admin::createCourse');
-    $routes->post('courses/store', 'Admin::storeCourse');
-    $routes->get('courses/edit/(:num)', 'Admin::editCourse/$1');
-    $routes->post('courses/update/(:num)', 'Admin::updateCourse/$1');
-    $routes->get('courses/delete/(:num)', 'Admin::deleteCourse/$1');
-
     $routes->get('students', 'Admin::students');
     $routes->get('students/create', 'Admin::createStudent');
     $routes->post('students/store', 'Admin::storeStudent');
@@ -39,6 +32,20 @@ $routes->group('admin', ['filter' => 'auth:admin'], function ($routes) {
     $routes->post('students/update/(:num)', 'Admin::updateStudent/$1');
     $routes->get('students/delete/(:num)', 'Admin::deleteStudent/$1');
     $routes->get('students/detail/(:num)', 'Admin::detail/$1');
+
+    $routes->get('courses', 'Admin::courses');
+    $routes->get('courses/create', 'Admin::createCourse');
+    $routes->post('courses/store', 'Admin::storeCourse');
+    $routes->get('courses/edit/(:num)', 'Admin::editCourse/$1');
+    $routes->post('courses/update/(:num)', 'Admin::updateCourse/$1');
+    $routes->get('courses/delete/(:num)', 'Admin::deleteCourse/$1');
+
+    // Route tambahan untuk navigasi di dashboard admin
+    $routes->get('manage_students', 'Admin::students');
+    $routes->get('manage_courses', 'Admin::courses');
+
+    // Endpoint untuk daftar mahasiswa JSON
+    $routes->get('list_students', 'Admin::listStudents');
 });
 
 // Enrollment Management
