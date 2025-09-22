@@ -1,0 +1,66 @@
+DEBUG - 2025-09-17 06:49:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-17 06:49:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-09-17 06:49:20 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'akademik_db', 3306, '', 0)
+#1 C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\app\Controllers\Auth.php(25): CodeIgniter\BaseModel->first()
+#7 C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#8 C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\system\rewrite.php(44): require_once('C:\\Users\\Ersya ...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\app\Controllers\Auth.php(25): CodeIgniter\BaseModel->first()
+#6 C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#7 C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Ersya Hasby Satria\Documents\GitHub\Mission3-Proyek3\CI4 - Mission3\system\rewrite.php(44): require_once('C:\\Users\\Ersya ...')
+#13 {main}
+CRITICAL - 2025-09-17 06:49:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Auth.php(25): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Ersya Hasby Satria\\Documents\\GitHub\\Mission3-Proyek3\\CI4 - Mission3\\public\\index.php')
+DEBUG - 2025-09-17 06:49:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-17 06:49:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-17 06:49:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-17 06:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-17 06:49:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-17 06:50:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-17 06:50:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-17 07:07:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-17 07:09:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-17 07:09:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-17 07:10:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

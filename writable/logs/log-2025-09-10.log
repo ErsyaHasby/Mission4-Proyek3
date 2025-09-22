@@ -1,0 +1,60 @@
+CRITICAL - 2025-09-10 04:39:18 --> ErrorException: Undefined array key "nim"
+[Method: GET, Route: mahasiswa/detail/072]
+in APPPATH\Views\mahasiswa_detail_view.php on line 5.
+ 1 APPPATH\Views\mahasiswa_detail_view.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nim"', 'C:\\xampp\\htdocs\\CI4-Templatev2\\app\\Views\\mahasiswa_detail_view.php', 5)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-Templatev2\\app\\Views\\mahasiswa_detail_view.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('mahasiswa_detail_view', [], true)
+ 5 APPPATH\Controllers\mahasiswa.php(29): view('mahasiswa_detail_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\mahasiswa->detail('072')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\mahasiswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI4-Templatev2\\public\\index.php')
+CRITICAL - 2025-09-10 04:39:24 --> ErrorException: Undefined array key "nim"
+[Method: GET, Route: mahasiswa]
+in APPPATH\Views\mahasiswaview.php on line 16.
+ 1 APPPATH\Views\mahasiswaview.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nim"', 'C:\\xampp\\htdocs\\CI4-Templatev2\\app\\Views\\mahasiswaview.php', 16)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-Templatev2\\app\\Views\\mahasiswaview.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('mahasiswaview', [], true)
+ 5 APPPATH\Controllers\mahasiswa.php(16): view('mahasiswaview', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\mahasiswa->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\mahasiswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI4-Templatev2\\public\\index.php')
+CRITICAL - 2025-09-10 04:40:32 --> ErrorException: Undefined array key "nim"
+[Method: GET, Route: mahasiswa]
+in APPPATH\Views\mahasiswaview.php on line 20.
+ 1 APPPATH\Views\mahasiswaview.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nim"', 'C:\\xampp\\htdocs\\CI4-Templatev2\\app\\Views\\mahasiswaview.php', 20)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-Templatev2\\app\\Views\\mahasiswaview.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('mahasiswaview', [], true)
+ 5 APPPATH\Controllers\mahasiswa.php(16): view('mahasiswaview', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\mahasiswa->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\mahasiswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI4-Templatev2\\public\\index.php')
+CRITICAL - 2025-09-10 04:40:51 --> ErrorException: Undefined array key "nim"
+[Method: GET, Route: mahasiswa/detail/072]
+in APPPATH\Views\mahasiswa_detail_view.php on line 5.
+ 1 APPPATH\Views\mahasiswa_detail_view.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nim"', 'C:\\xampp\\htdocs\\CI4-Templatev2\\app\\Views\\mahasiswa_detail_view.php', 5)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-Templatev2\\app\\Views\\mahasiswa_detail_view.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('mahasiswa_detail_view', [], true)
+ 5 APPPATH\Controllers\mahasiswa.php(29): view('mahasiswa_detail_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\mahasiswa->detail('072')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\mahasiswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI4-Templatev2\\public\\index.php')

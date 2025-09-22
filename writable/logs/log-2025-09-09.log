@@ -1,0 +1,104 @@
+CRITICAL - 2025-09-09 03:59:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "mahasiswaview.php"
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('mahasiswaview.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('mahasiswaview', [], true)
+ 3 APPPATH\Controllers\mahasiswa.php(16): view('mahasiswaview', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\mahasiswa->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\mahasiswa))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lenovo\\OneDrive - Politeknik Negeri Bandung\\Personal Document\\JTK\\Semester-3\\Proyek-3\\Proyek-3\\CI-TemplateV2\\public\\index.php')
+CRITICAL - 2025-09-09 03:59:29 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "mahasiswaview.php"
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('mahasiswaview.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('mahasiswaview', [], true)
+ 3 APPPATH\Controllers\mahasiswa.php(16): view('mahasiswaview', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\mahasiswa->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\mahasiswa))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lenovo\\OneDrive - Politeknik Negeri Bandung\\Personal Document\\JTK\\Semester-3\\Proyek-3\\Proyek-3\\CI-TemplateV2\\public\\index.php')
+CRITICAL - 2025-09-09 03:59:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "mahasiswaview.php"
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('mahasiswaview.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('mahasiswaview', [], true)
+ 3 APPPATH\Controllers\mahasiswa.php(16): view('mahasiswaview', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\mahasiswa->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\mahasiswa))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lenovo\\OneDrive - Politeknik Negeri Bandung\\Personal Document\\JTK\\Semester-3\\Proyek-3\\Proyek-3\\CI-TemplateV2\\public\\index.php')
+CRITICAL - 2025-09-09 04:00:48 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "mahasiswaview.php"
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('mahasiswaview.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('mahasiswaview', [], true)
+ 3 APPPATH\Controllers\mahasiswa.php(16): view('mahasiswaview', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\mahasiswa->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\mahasiswa))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lenovo\\OneDrive - Politeknik Negeri Bandung\\Personal Document\\JTK\\Semester-3\\Proyek-3\\Proyek-3\\CI-TemplateV2\\public\\index.php')
+CRITICAL - 2025-09-09 04:01:18 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "mahasiswaview.php"
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('mahasiswaview.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('mahasiswaview', [], true)
+ 3 APPPATH\Controllers\mahasiswa.php(16): view('mahasiswaview', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\mahasiswa->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\mahasiswa))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lenovo\\OneDrive - Politeknik Negeri Bandung\\Personal Document\\JTK\\Semester-3\\Proyek-3\\Proyek-3\\CI-TemplateV2\\public\\index.php')
+CRITICAL - 2025-09-09 04:01:19 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "mahasiswaview.php"
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('mahasiswaview.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('mahasiswaview', [], true)
+ 3 APPPATH\Controllers\mahasiswa.php(16): view('mahasiswaview', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\mahasiswa->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\mahasiswa))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lenovo\\OneDrive - Politeknik Negeri Bandung\\Personal Document\\JTK\\Semester-3\\Proyek-3\\Proyek-3\\CI-TemplateV2\\public\\index.php')
+CRITICAL - 2025-09-09 04:01:27 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "mahasiswaview.php"
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('mahasiswaview.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('mahasiswaview', [], true)
+ 3 APPPATH\Controllers\mahasiswa.php(16): view('mahasiswaview', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\mahasiswa->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\mahasiswa))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lenovo\\OneDrive - Politeknik Negeri Bandung\\Personal Document\\JTK\\Semester-3\\Proyek-3\\Proyek-3\\CI-TemplateV2\\public\\index.php')
+CRITICAL - 2025-09-09 04:04:27 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "mahasiswaview.php"
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('mahasiswaview.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('mahasiswaview', [], true)
+ 3 APPPATH\Controllers\mahasiswa.php(16): view('mahasiswaview', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\mahasiswa->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\mahasiswa))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lenovo\\OneDrive - Politeknik Negeri Bandung\\Personal Document\\JTK\\Semester-3\\Proyek-3\\Proyek-3\\CI-TemplateV2\\public\\index.php')
