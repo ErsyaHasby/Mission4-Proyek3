@@ -8,6 +8,6 @@ class CourseModel extends Model
 {
     protected $table = 'courses';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['title', 'description', 'created_at'];
-    protected $useTimestamps = true;
+    protected $allowedFields = ['title', 'description', 'sks'];
+    protected $returnType = 'array';
 }

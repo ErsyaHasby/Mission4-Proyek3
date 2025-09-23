@@ -17,31 +17,6 @@ class Student extends BaseController
         ]);
     }
 
-    public function courses()
-    {
-        $courseModel = new CourseModel();
-        $enrollmentModel = new EnrollmentModel();
-        $db = Database::connect();
-
-        $userId = session()->get('user_id');
-
-        // Semua courses
-        $allCourses = $courseModel->findAll();
-
-        // Course yang sudah diambil mahasiswa ini
-        $takenCourses = $db->table('enrollments e')
-            ->select('c.id, c.title, c.description')
-            ->join('courses c', 'c.id = e.course_id')
-            ->where('e.user_id', $userId)
-            ->get()->getResultArray();
-
-        return view('student/courses', [
-            'title' => 'Daftar Courses',
-            'allCourses' => $allCourses,
-            'takenCourses' => $takenCourses
-        ]);
-    }
-
     public function enroll($courseId)
     {
         $userId = session()->get('user_id');
@@ -80,5 +55,75 @@ class Student extends BaseController
             'title' => 'Data Diri Mahasiswa',
             'student' => $student
         ]);
+    }
+
+    public function courses()
+    {
+        $courseModel = new CourseModel();
+        $enrollmentModel = new EnrollmentModel();
+        $db = Database::connect();
+
+        $userId = session()->get('user_id');
+
+        // Semua courses dengan SKS
+        $allCourses = $courseModel->findAll();
+
+        // Course yang sudah diambil mahasiswa ini
+        $takenCourses = $db->table('enrollments e')
+            ->select('c.id, c.title, c.description, c.sks, e.id as enrollment_id')
+            ->join('courses c', 'c.id = e.course_id')
+            ->where('e.user_id', $userId)
+            ->get()->getResultArray();
+
+        return view('student/courses', [
+            'title' => 'Daftar Courses',
+            'allCourses' => $allCourses,
+            'takenCourses' => $takenCourses
+        ]);
+    }
+
+    public function deleteEnroll($enrollmentId)
+    {
+        $userId = session()->get('user_id');
+        $enrollmentModel = new EnrollmentModel();
+
+        $enrollment = $enrollmentModel->where('id', $enrollmentId)->where('user_id', $userId)->first();
+
+        if ($enrollment) {
+            $enrollmentModel->delete($enrollmentId);
+            return redirect()->to('/student/courses')->with('success', 'Course berhasil dihapus dari enrollment');
+        }
+
+        return redirect()->to('/student/courses')->with('error', 'Enrollment tidak ditemukan');
+    }
+
+    public function enrollMultiple()
+    {
+        $enrollmentModel = new EnrollmentModel();
+        $userId = session()->get('user_id');
+        $selectedCourses = $this->request->getPost('courses');
+
+        if (empty($selectedCourses)) {
+            return redirect()->to('/student/courses')->with('error', 'Pilih setidaknya satu course!');
+        }
+
+        $courseModel = new CourseModel();
+        $db = Database::connect();
+        $existingEnrollments = $db->table('enrollments')
+            ->where('user_id', $userId)
+            ->get()->getResultArray();
+
+        $existingCourseIds = array_column($existingEnrollments, 'course_id');
+
+        foreach ($selectedCourses as $courseId) {
+            if (!in_array($courseId, $existingCourseIds)) {
+                $enrollmentModel->insert([
+                    'user_id' => $userId,
+                    'course_id' => $courseId
+                ]);
+            }
+        }
+
+        return redirect()->to('/student/courses')->with('success', 'Courses berhasil di-enroll!');
     }
 }

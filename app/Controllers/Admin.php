@@ -212,6 +212,11 @@ class Admin extends BaseController
         $mahasiswaModel = new MahasiswaModel();
         $students = $mahasiswaModel->findAll();
 
+        // Pastikan data adalah array, jika kosong kembalikan array kosong
+        if ($students === null) {
+            $students = [];
+        }
+
         return $this->response->setJSON($students);
     }
 }

@@ -12,37 +12,39 @@
             <div class="alert alert-danger"><?= session()->getFlashdata('error') ?></div>
         <?php endif; ?>
 
-        <h5 class="mt-4">Courses yang Tersedia</h5>
-        <?php if (!empty($allCourses)): ?>
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Judul</th>
-                        <th>Deskripsi</th>
-                        <th>Aksi</th>
-                    </tr>
-                </thead>
-                <tbody>
+        <h5 class="mt-4">Pilih Courses untuk Enroll</h5>
+        <form id="enroll-form" method="post" action="/student/enroll_multiple">
+            <div id="course-list" class="mb-3">
+                <?php if (!empty($allCourses)): ?>
                     <?php foreach ($allCourses as $course): ?>
-                        <tr>
-                            <td><?= esc($course['title']) ?></td>
-                            <td><?= esc($course['description']) ?></td>
-                            <td>
-                                <a href="/student/enroll/<?= esc($course['id']) ?>" class="btn btn-sm btn-primary">Enroll</a>
-                            </td>
-                        </tr>
+                        <?php $isEnrolled = false; ?>
+                        <?php foreach ($takenCourses as $tc): ?>
+                            <?php if ($tc['id'] == $course['id']): $isEnrolled = true; break; endif; ?>
+                        <?php endforeach; ?>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input course-checkbox" name="courses[]" value="<?= $course['id'] ?>" id="course-<?= $course['id'] ?>" <?= $isEnrolled ? 'disabled' : '' ?>>
+                            <label class="form-check-label" for="course-<?= $course['id'] ?>">
+                                <?= esc($course['title']) ?> (SKS: <?= esc($course['sks']) ?>) - <?= esc($course['description']) ?>
+                            </label>
+                        </div>
                     <?php endforeach; ?>
-                </tbody>
-            </table>
-        <?php else: ?>
-            <p>Tidak ada course tersedia.</p>
-        <?php endif; ?>
+                <?php else: ?>
+                    <p>Tidak ada course tersedia.</p>
+                <?php endif; ?>
+            </div>
+            <p>Total SKS: <span id="total-sks">0</span></p>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <div id="error-message" class="text-danger mt-2" style="display: none;"></div>
+        </form>
 
         <h5 class="mt-5">Courses yang Sudah Diambil</h5>
         <?php if (!empty($takenCourses)): ?>
             <ul class="list-group">
                 <?php foreach ($takenCourses as $tc): ?>
-                    <li class="list-group-item"><?= esc($tc['title']) ?> - <?= esc($tc['description']) ?></li>
+                    <li class="list-group-item">
+                        <?= esc($tc['title']) ?> - <?= esc($tc['description']) ?> (SKS: <?= esc($tc['sks']) ?>)
+                        <a href="/student/delete_enroll/<?= esc($tc['enrollment_id']) ?>" class="btn btn-sm btn-danger float-end" onclick="return confirm('Yakin hapus enrollment ini?')">Delete</a>
+                    </li>
                 <?php endforeach; ?>
             </ul>
         <?php else: ?>

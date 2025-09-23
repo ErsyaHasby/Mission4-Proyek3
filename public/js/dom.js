@@ -12,6 +12,17 @@ async function displayMahasiswaList() {
             const response = await fetch('/admin/list_students');
             const data = await response.json();
 
+            // Pengecekan jika data bukan array atau kosong
+            if (!Array.isArray(data)) {
+                mahasiswaList.innerHTML = '<p>Data mahasiswa tidak tersedia.</p>';
+                return;
+            }
+
+            if (data.length === 0) {
+                mahasiswaList.innerHTML = '<p>Tidak ada mahasiswa yang terdaftar.</p>';
+                return;
+            }
+
             data.forEach(mahasiswa => {
                 const div = document.createElement('div');
                 div.className = 'alert alert-info mb-2';
