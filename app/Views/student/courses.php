@@ -1,7 +1,7 @@
 <?= $this->extend('template') ?>
 <?= $this->section('content') ?>
 
-<div class="card shadow">
+<div class="card">
     <div class="card-header">
         <h4>Daftar Courses</h4>
     </div>
