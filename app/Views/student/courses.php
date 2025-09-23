@@ -35,6 +35,7 @@
             <p>Total SKS: <span id="total-sks">0</span></p>
             <button type="submit" class="btn btn-primary">Submit</button>
             <div id="error-message" class="text-danger mt-2" style="display: none;"></div>
+            <div id="async-notification" class="mt-3" style="display: none;"></div>
         </form>
 
         <h5 class="mt-5">Courses yang Sudah Diambil</h5>

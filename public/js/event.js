@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalSks = document.getElementById('total-sks');
     const form = document.getElementById('enroll-form');
     const errorMessage = document.getElementById('error-message');
+    const asyncNotification = document.getElementById('async-notification');
     const deleteButtons = document.querySelectorAll('.delete-btn');
 
     // Hitung total SKS saat checkbox diubah
@@ -17,6 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
             totalSks.textContent = total;
+
+            // Contoh setTimeout (async)
+            setTimeout(() => {
+                asyncNotification.style.display = 'block';
+                asyncNotification.textContent = `Pemberitahuan: Total SKS Anda saat ini ${total} setelah 2 detik!`;
+                setTimeout(() => {
+                    asyncNotification.style.display = 'none';
+                }, 2000); // Hilang setelah 2 detik
+            }, 2000); // Tampil setelah 2 detik
         });
     });
 

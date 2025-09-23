@@ -126,4 +126,35 @@ class Student extends BaseController
 
         return redirect()->to('/student/courses')->with('success', 'Courses berhasil di-enroll!');
     }
+
+    public function getCourses()
+    {
+        $courseModel = new CourseModel();
+        $courses = $courseModel->findAll();
+        return $this->response->setJSON($courses);
+    }
+
+    public function enrollCourse()
+    {
+        $userId = session()->get('user_id');
+        $courseId = $this->request->getPost('course_id');
+
+        if (!$courseId) {
+            return $this->response->setJSON(['status' => 'error', 'message' => 'Course ID required'], 400);
+        }
+
+        $enrollmentModel = new EnrollmentModel();
+        $exists = $enrollmentModel->where('user_id', $userId)->where('course_id', $courseId)->first();
+
+        if ($exists) {
+            return $this->response->setJSON(['status' => 'error', 'message' => 'Already enrolled'], 400);
+        }
+
+        $enrollmentModel->insert([
+            'user_id' => $userId,
+            'course_id' => $courseId
+        ]);
+
+        return $this->response->setJSON(['status' => 'success', 'message' => 'Enrolled successfully']);
+    }
 }

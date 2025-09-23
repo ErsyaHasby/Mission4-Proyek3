@@ -14,7 +14,7 @@ $routes->get('/login', 'Auth::index');    // tampilkan form login
 $routes->post('/login', 'Auth::login');   // proses login
 $routes->get('/logout', 'Auth::logout');  // logout
 
-// Student
+// Student Pages (dengan autentikasi)
 $routes->group('student', ['filter' => 'auth:student'], function ($routes) {
     $routes->get('dashboard', 'Student::dashboard');
     $routes->get('courses', 'Student::courses');
@@ -22,6 +22,12 @@ $routes->group('student', ['filter' => 'auth:student'], function ($routes) {
     $routes->get('profile', 'Student::profile');
     $routes->get('delete_enroll/(:num)', 'Student::deleteEnroll/$1');
     $routes->post('enroll_multiple', 'Student::enrollMultiple');
+});
+
+// API Routes (tanpa filter autentikasi untuk saat ini, akan ditambahkan nanti)
+$routes->group('api', function ($routes) {
+    $routes->get('courses', 'Student::getCourses');
+    $routes->post('enroll', 'Student::enrollCourse');
 });
 
 // Admin
@@ -33,7 +39,6 @@ $routes->group('admin', ['filter' => 'auth:admin'], function ($routes) {
     $routes->get('courses/edit/(:num)', 'Admin::editCourse/$1');
     $routes->post('courses/update/(:num)', 'Admin::updateCourse/$1');
     $routes->get('courses/delete/(:num)', 'Admin::deleteCourse/$1');
-    $routes->get('list_students', 'Admin::listStudents');
 
     $routes->get('students', 'Admin::students');
     $routes->get('students/create', 'Admin::createStudent');
