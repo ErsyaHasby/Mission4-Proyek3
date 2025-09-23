@@ -27,6 +27,12 @@
             background-color: #0d6efd;
             color: white;
         }
+
+        .list-group-item.active {
+            background-color: #0d6efd !important;
+            color: white !important;
+            border-color: #0d6efd !important;
+        }
     </style>
 </head>
 

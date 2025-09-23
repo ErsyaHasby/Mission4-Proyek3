@@ -13,7 +13,7 @@
         <?php endif; ?>
 
         <h5 class="mt-4">Pilih Courses untuk Enroll</h5>
-        <form id="enroll-form" method="post" action="/student/enroll_multiple">
+        <form id="enroll-form" method="post" action="/student/enroll_multiple" class="needs-validation" novalidate>
             <div id="course-list" class="mb-3">
                 <?php if (!empty($allCourses)): ?>
                     <?php foreach ($allCourses as $course): ?>
@@ -43,7 +43,7 @@
                 <?php foreach ($takenCourses as $tc): ?>
                     <li class="list-group-item">
                         <?= esc($tc['title']) ?> - <?= esc($tc['description']) ?> (SKS: <?= esc($tc['sks']) ?>)
-                        <a href="/student/delete_enroll/<?= esc($tc['enrollment_id']) ?>" class="btn btn-sm btn-danger float-end" onclick="return confirm('Yakin hapus enrollment ini?')">Delete</a>
+                        <a href="/student/delete_enroll/<?= esc($tc['enrollment_id']) ?>" class="btn btn-sm btn-danger float-end delete-btn" data-id="<?= $tc['enrollment_id'] ?>" data-title="<?= $tc['title'] ?>" data-sks="<?= $tc['sks'] ?>">Delete</a>
                     </li>
                 <?php endforeach; ?>
             </ul>

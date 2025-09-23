@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalSks = document.getElementById('total-sks');
     const form = document.getElementById('enroll-form');
     const errorMessage = document.getElementById('error-message');
+    const deleteButtons = document.querySelectorAll('.delete-btn');
 
     // Hitung total SKS saat checkbox diubah
     checkboxes.forEach(checkbox => {
@@ -19,15 +20,48 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Validasi dan submit form
+    // Validasi dan submit form dengan border merah
     form.addEventListener('submit', (event) => {
         const checkedBoxes = document.querySelectorAll('.course-checkbox:checked');
         if (checkedBoxes.length === 0) {
             event.preventDefault();
             errorMessage.textContent = 'Pilih setidaknya satu course!';
             errorMessage.style.display = 'block';
+            form.classList.add('was-validated');
         } else {
             errorMessage.style.display = 'none';
+            form.classList.remove('was-validated');
         }
+    });
+
+    // Inisialisasi validasi Bootstrap
+    (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+            var forms = document.getElementsByClassName('needs-validation');
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+
+    // Konfirmasi delete dengan dialog
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault();
+            const id = button.getAttribute('data-id');
+            const title = button.getAttribute('data-title');
+            const sks = button.getAttribute('data-sks');
+            const confirmed = confirm(`Yakin ingin menghapus course "${title}" (SKS: ${sks})?`);
+            if (confirmed) {
+                window.location.href = button.getAttribute('href');
+            }
+        });
     });
 });
